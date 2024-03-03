@@ -1,0 +1,151 @@
+@font-face{
+    font-family: "custom";
+    src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+@font-face {
+    font-family: "custom for p";
+    src: url("assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+:root {
+    --timer-color: hsl(332, 51%, 32%);
+    --font-timer :"custom for p"
+  }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:custom , serif ;
+    background-color: hsl(330, 100%, 98%);
+    height: calc(100vh - 30px);
+    margin-top: 30px;
+}
+.container{
+    display: flex;
+    margin: 0 auto;
+    align-items: start;
+    flex-direction: column;
+    width: 700px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    padding: 0 20px;
+}
+.container img {
+    width: 640px;
+    margin: 30px auto;
+    border-radius: 15px;
+}
+.container h1{
+    font-weight: 500;
+}
+.container p{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "custom for p";
+    margin-bottom: 15px;
+}
+.container .time {
+    background-color: hsl(330, 100%, 98%);
+    width: 100%;
+    border-radius: 15px;
+    padding: 20px;
+    font-family: var(--font-timer);
+}
+.container .time h2{
+    font-size: 18px;
+    color: var(--timer-color);
+}
+.container .time ul{
+    list-style-type: none;
+    padding: 0;
+}
+.container .time li {
+    margin: 10px 25px; /* Add margin for spacing between list items */
+    padding-left: 12px;
+    position: relative;
+}
+li::before {
+    content: ''; /* Add content for the marker */
+    position: absolute; /* Set the position absolute */
+    background-color: var(--timer-color);
+    left: -18px; /* Position it to the left of the list item */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust to perfectly center */
+    width: 4px; /* Set the width of the marker */
+    height: 4px; /* Set the height of the marker *//* Set the color of the marker */
+    border-radius: 50%; /* Make it a circle */
+    margin-right: 10px; /* Add space between the marker and the text */
+}
+.container .time li:last-of-type {
+    margin-bottom: 0 !important; /* Add margin for spacing between list items */
+}
+.container .time li span{
+    color: var(--timer-color);
+    font-weight: 700;
+}
+.container h2:nth-child(5){
+    color: hsl(14, 45%, 36%);
+    font-weight: 500;
+    padding: 15px 0;
+}
+.container .Ingredients {
+    list-style-type: none;
+}
+.container .Ingredients li{
+    margin: 15px 30px;
+    position: relative;
+    font-family: var(--font-timer);
+    color: var(--timer-color);
+}
+.container .Ingredients li::before {
+    content: "";
+    position: absolute;
+    background-color: hsl(14, 45%, 36%);
+    left: -18px;
+    top:50%;
+    transform: translate(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+hr{
+    background-color: hsl(330, 100%, 98%);
+    height: 1%;
+    width: 95%;
+    margin: 20px auto;
+}
+.container h2:nth-child(8) {
+    color:hsl(14, 45%, 36%) ;
+}
+.container .instructions li {
+    font-family: var(--font-timer);
+    margin: 15px 20px;
+    color: var(--timer-color);
+}
+.container .instructions li span{
+    font-weight: 700;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+td{
+    border-bottom: 1px solid;
+    border-color: var(--timer-color);
+    padding: 8px;
+    text-align: left;
+}
+.tds{
+    color: var(--timer-color);
+    font-family: var(--font-timer);
+    font-weight: 500;
+}
+.tdy{
+    color:hsl(14, 45%, 36%) ;
+    font-family: var(--font-timer);
+    font-weight: 700;
+}
